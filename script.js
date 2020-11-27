@@ -4,14 +4,20 @@ const bandeira = (pais) =>
 let app = new Vue({
   el: "#app",
   data: {
-    pais: "",
     alemanha: bandeira("alemanha"),
     brasil: bandeira("brasil"),
     china: bandeira("china"),
     portugal: bandeira("portugal"),
     usa: bandeira("usa"),
   },
-  methods: {},
+  methods: {
+    paises: function () {
+      return [
+        { bandeira: this.alemanha, continente: "Europa" },
+        { bandeira: this.china, continente: "Asia" },
+        { bandeira: this.usa, continente: "America do Norte" },
+        { bandeira: this.portugal, continente: "Europa" },
+      ];
+    },
+  },
 });
-
-app.pais = "usa";

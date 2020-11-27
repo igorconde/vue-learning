@@ -8,16 +8,10 @@
 </head>
 <body>
 <div id="app">
- <div>
-     <p v-html="(pais == 'alemanha' ? alemanha :
-                 pais == 'portugal' ? portugal :
-                 pais == 'china'    ? china    :
-                 pais == 'usa'      ? usa  :  '')"></p>
-    <p v-html="(pais == 'alemanha' ? 'Europa' :
-                pais == 'portugal' ? 'Europa' :
-                pais == 'china'    ? 'Asia'    :
-                pais == 'usa'      ? 'America do Norte'  :  '')"></p>
- </div>
+    <div v-for="pais in paises()">
+        <p v-html="pais.bandeira"></p>
+        <p v-html="pais.continente"></p>
+    </div>
 </div>
 </body>
 <script src="script.js"></script>
