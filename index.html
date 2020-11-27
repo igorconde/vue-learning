@@ -8,9 +8,17 @@
 </head>
 <body>
 <div id="app">
-  {{hello('Name',44)}}
-  {{arrowFunction()}}
+ <div>
+     <p v-html="(pais == 'alemanha' ? alemanha :
+                 pais == 'portugal' ? portugal :
+                 pais == 'china'    ? china    :
+                 pais == 'usa'      ? usa  :  '')"></p>
+    <p v-html="(pais == 'alemanha' ? 'Europa' :
+                pais == 'portugal' ? 'Europa' :
+                pais == 'china'    ? 'Asia'    :
+                pais == 'usa'      ? 'America do Norte'  :  '')"></p>
+ </div>
 </div>
 </body>
-<script src="/script.js"></script>
+<script src="script.js"></script>
 </html>
