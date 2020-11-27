@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    {{n1}} + {{n2}}
+    <input type="text" v-model="n3">
+    <div v-if="n1+n2 == parseInt(n3)">ACERTOU</div>
+    <div v-if="n1+n2 != parseInt(n3)">ERROU</div>
+</div>
+</body>
+<script src="/script.js"></script>
+</html>
