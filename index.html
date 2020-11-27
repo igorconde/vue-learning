@@ -8,10 +8,7 @@
 </head>
 <body>
 <div id="app">
-    <div v-for="pais in paises()">
-        <p v-html="pais.bandeira"></p>
-        <p v-html="pais.continente"></p>
-    </div>
+    <pais :bandeira="china" continente="Ásia"></pais>
 </div>
 </body>
 <script src="script.js"></script>

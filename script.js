@@ -1,6 +1,11 @@
 const bandeira = (pais) =>
   `<img src="/paises/${pais}.png" style="width:30px" />`;
 
+Vue.component("pais", {
+  props: ["bandeira", "continente"],
+  template: `<p v-html="bandeira + continente"></p>`,
+});
+
 let app = new Vue({
   el: "#app",
   data: {
@@ -9,15 +14,5 @@ let app = new Vue({
     china: bandeira("china"),
     portugal: bandeira("portugal"),
     usa: bandeira("usa"),
-  },
-  methods: {
-    paises: function () {
-      return [
-        { bandeira: this.alemanha, continente: "Europa" },
-        { bandeira: this.china, continente: "Asia" },
-        { bandeira: this.usa, continente: "America do Norte" },
-        { bandeira: this.portugal, continente: "Europa" },
-      ];
-    },
   },
 });
