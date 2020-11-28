@@ -12,42 +12,10 @@ destroyed - quando o elemento é destruido
 let app = new Vue({
   el: "#app",
   data: {
-    errorMsg: "",
-    errorType: "",
+    aviso: "Aviso !",
+    avisoStyle: { border: "2px solid #000" },
   },
-  computed: {
-    errorDivClass: function () {
-      let r = { ativo: false, warning: false, error: false };
-
-      if (this.errorMsg != "") {
-        r.ativo = true;
-      }
-
-      switch (this.errorType) {
-        case "warning":
-          r.warning = true;
-          r.error = false;
-          break;
-        case "error":
-          r.warning = false;
-          r.error = true;
-          break;
-      }
-      return r;
-    },
-  },
+  computed: {},
   watch: {},
-  methods: {
-    showWarning: function (msg) {
-      this.errorMsg = msg;
-      this.errorType = "warning";
-    },
-    showError: function (msg) {
-      this.errorMsg = msg;
-      this.errorType = "error";
-    },
-    hideError: function () {
-      this.errorMsg = "";
-    },
-  },
+  methods: {},
 });
