@@ -21,5 +21,8 @@ let app = new Vue({
       console.log(e);
       this.contagem += x;
     },
+    prevent: function () {
+      console.log("Defu");
+    },
   },
 });

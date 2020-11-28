@@ -46,6 +46,11 @@
     </aside>
 
     <main class="main container mx-auto my-12 p-12">
+        <form v-on:submit.prevent="prevent">
+            <input type="text">
+            <input type="submit" value="Clique Aqui para enviar">
+        </form>
+
         <button
             class="transition duration-300 ease-in-out mr-1 mb-1 last:mr-0 py-2 px-4 bg-transparent border border-solid border-purple-700 rounded text-purple-700 font-normal focus:outline-none focus:shadow-outline hover:bg-purple-700 hover:text-white"
             v-on:click="addContagem(10, $event)">
