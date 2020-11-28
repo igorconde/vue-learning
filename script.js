@@ -22,7 +22,7 @@ let app = new Vue({
       this.contagem += x;
     },
     prevent: function () {
-      console.log("Defu");
+      this.contagem++;
     },
   },
 });
