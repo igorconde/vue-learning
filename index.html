@@ -46,10 +46,10 @@
     </aside>
 
     <main class="main container mx-auto my-12 p-12">
-        <div class="area" v-on:click.self.prevent="prevent">
-            <button>Clique Aqui</button>
-        </div>
-        {{contagem}}
+    <input v-model="busca">
+    <ul v-for="item in nomesFiltrados">
+         <li>{{item}}</li>
+    </ul>
     </main>
     <footer class="footer">
         <p><span class="footer__copyright">&copy;</span>  MTH</p>

@@ -12,17 +12,22 @@ destroyed - quando o elemento é destruido
 let app = new Vue({
   el: "#app",
   data: {
-    contagem: 0,
+    busca: "",
+    nomes: ["Igor", "Fulano", "Ciclano"],
   },
-  computed: {},
+  computed: {
+    nomesFiltrados: function (name) {
+      return this.nomes.filter(function (nome) {
+        if (this.busca != "") {
+          if (nome.toLowerCase().indexOf(this.busca.toLowerCase()) > -1) {
+            return true;
+          }
+        } else {
+          return true;
+        }
+      }, this);
+    },
+  },
   watch: {},
-  methods: {
-    addContagem: function (x, e) {
-      console.log(e);
-      this.contagem += x;
-    },
-    prevent: function () {
-      this.contagem++;
-    },
-  },
+  methods: {},
 });
