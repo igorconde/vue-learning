@@ -12,13 +12,12 @@ destroyed - quando o elemento é destruido
 let app = new Vue({
   el: "#app",
   data: {
-    url: "https://www.google.com.br",
+    nome: "Igor",
   },
-  methods: {
-    fazAlgumaCoisa: () => {
-      console.log(
-        "Você pode diminuir o tamanho do v-on somente digitando um @"
-      );
+  computed: {
+    nomeInvertido: function () {
+      return this.nome.split("").reverse().join("");
     },
   },
+  methods: {},
 });
