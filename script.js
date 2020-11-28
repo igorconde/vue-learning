@@ -12,11 +12,12 @@ destroyed - quando o elemento é destruido
 let app = new Vue({
   el: "#app",
   data: {
-    nome: "Igor",
+    numero: 5,
   },
   computed: {
-    nomeInvertido: function () {
-      return this.nome.split("").reverse().join("");
+    aleatorio: function () {
+      let al = Math.floor(Math.random() * 100);
+      return `${this.numero} + ${al} = ${this.numero + al}`;
     },
   },
   methods: {},
