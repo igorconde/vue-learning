@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -44,15 +46,10 @@
     </aside>
 
     <main class="main">
-        <template v-if="ganhou">
-            <h1>Você ganhou</h1>
-            <small>Parabéns</small>
-        </template>
-        <template v-else>
-            <h1>Você Perdeu</h1>
-            <small>Tente na proxima.</small>
-        </template>
-     </main>
+        <div v-for="(value, key, index) in objeto" class="text-center">
+           {{index}} -  {{key}} : {{value}}
+        </div>
+    </main>
     <footer class="footer">
         <p><span class="footer__copyright">&copy;</span>  MTH</p>
     </footer>
