@@ -12,41 +12,42 @@ destroyed - quando o elemento é destruido
 let app = new Vue({
   el: "#app",
   data: {
-    nomeInput: "",
-    aviso: "",
-    nomePronto: false,
-    lista: [],
-    times: null,
-  },
-  watch: {
-    nomeInput: function () {
-      if (this.timer != null) {
-        clearTimeout(this.timer);
-      }
-      if (this.nomeInput != "") {
-        this.aviso = "Digitando..";
-        this.nomePronto = false;
-        this.timer = setTimeout(this.ficarPronto, 1000);
-      }
-    },
-  },
-  methods: {
-    ficarPronto: function () {
-      this.aviso = "";
-
-      if (this.nomeInput.length > 2) {
-        this.nomePronto = true;
-      }
-    },
-    add: function () {
-      this.lista.push(this.nomeInput);
-      this.nomeInput = "";
-      this.nomePronto = false;
-    },
+    errorMsg: "",
+    errorType: "",
   },
   computed: {
-    totalTexto: function () {
-      return `Quantidade de nomes na lista ${this.lista.length}`;
+    errorDivClass: function () {
+      let r = { ativo: false, warning: false, error: false };
+
+      if (this.errorMsg != "") {
+        r.ativo = true;
+      }
+
+      switch (this.errorType) {
+        case "warning":
+          r.warning = true;
+          r.error = false;
+          break;
+        case "error":
+          r.warning = false;
+          r.error = true;
+          break;
+      }
+      return r;
+    },
+  },
+  watch: {},
+  methods: {
+    showWarning: function (msg) {
+      this.errorMsg = msg;
+      this.errorType = "warning";
+    },
+    showError: function (msg) {
+      this.errorMsg = msg;
+      this.errorType = "error";
+    },
+    hideError: function () {
+      this.errorMsg = "";
     },
   },
 });

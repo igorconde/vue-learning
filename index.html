@@ -6,6 +6,8 @@
     <title>Vue</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
 </head>
 <body>
 <div id="app">
@@ -229,21 +231,10 @@
     </aside>
 
     <main class="main">
-        Digite um nome:
-        <input v-model="nomeInput">
-        <br>
-        <span v-text="aviso"></span>
-        <div v-if="nomePronto">
-            <button @click="add">
-                Adicionar
-            </button>
+        
+        <div :class="errorDivClass">
+            {{errorMsg}}
         </div>
-        <br>
-        Nomes:
-        <ul>
-            <li v-for="item in lista"> {{ item }}</li>
-        </ul>
-        {{ totalTexto}}
      </main>
     <footer class="footer">
         <p><span class="footer__copyright">&copy;</span>  MTH</p>
@@ -253,3 +244,5 @@
 </body>
 <script src="script.js"></script>
 </html>
+
+<style></style>
