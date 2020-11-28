@@ -12,8 +12,7 @@ destroyed - quando o elemento é destruido
 let app = new Vue({
   el: "#app",
   data: {
-    aviso: "Aviso !",
-    avisoStyle: { border: "2px solid #000" },
+    ganhou: false,
   },
   computed: {},
   watch: {},
