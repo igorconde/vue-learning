@@ -12,30 +12,17 @@ destroyed - quando o elemento é destruido
 let app = new Vue({
   el: "#app",
   data: {
-    nome: "Igor",
+    n: 9,
+    aviso: true,
+    divid: "idVemDOVue",
+    linkVue: "www.google.com.br",
   },
-  beforeCreate: function () {
-    console.log(this.nome);
-  },
-  created: function () {
-    console.log(this.nome);
-  },
-  beforeMount: function () {
-    console.log(this.nome);
-  },
-  mounted: function () {
-    console.log(this.nome);
-  },
-  beforeUpdate: function () {
-    console.log(this.nome);
-  },
-  updated: function () {
-    console.log(this.nome);
-  },
-  beforeDestroy: function () {
-    console.log(this.nome);
-  },
-  destroyed: function () {
-    console.log(this.nome);
+  methods: {
+    clicou: () => {
+      console.log("v-on criou uma função padrão");
+    },
+    enviou: () => {
+      console.log("O v-on preveniu o evento padrão do formulario.");
+    },
   },
 });
