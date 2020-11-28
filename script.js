@@ -12,13 +12,28 @@ destroyed - quando o elemento é destruido
 let app = new Vue({
   el: "#app",
   data: {
-    numero: 5,
+    conta: "",
+    aviso: "",
+    resultado: "",
+    timer: null,
   },
-  computed: {
-    aleatorio: function () {
-      let al = Math.floor(Math.random() * 100);
-      return `${this.numero} + ${al} = ${this.numero + al}`;
+  methods: {
+    fazerConta: function () {
+      this.aviso = "";
+
+      this.resultado = eval(this.conta);
     },
   },
-  methods: {},
+  watch: {
+    conta: function () {
+      this.aviso = "Digitando....";
+
+      if (this.timer != null) {
+        clearTimeout(this.timer);
+      }
+
+      this.timer = setTimeout(this.fazerConta, 1000);
+    },
+  },
+  computed: {},
 });
