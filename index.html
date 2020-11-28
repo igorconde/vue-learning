@@ -229,25 +229,9 @@
     </aside>
 
     <main class="main">
-        <div v-if="aviso">asasas</div>
-
-        Com Variavel Simples:
-        <div v-bind:id="divid">Div Normal</div>
-
-        Com Href:
-        <a v-bind:href="linkVue">Link</a>
-
-        Funciona com template string:
-        <div v-bind:id="`item-${n}`">Qualquer</div>
-
-        <button v-on:click="clicou">Clique em mim!!</button>
-
-        <form v-on:submit.prevent="enviou">
-            <input type="text">
-            <input type="submit" >
-        </form>
-    </main>
-
+        <a :href="url">Clique Aqui</a>
+        <button @click="fazAlgumaCoisa">Botão</button>
+     </main>
     <footer class="footer">
         <p><span class="footer__copyright">&copy;</span>  MTH</p>
     </footer>

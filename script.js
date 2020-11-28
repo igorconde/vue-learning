@@ -12,17 +12,13 @@ destroyed - quando o elemento é destruido
 let app = new Vue({
   el: "#app",
   data: {
-    n: 9,
-    aviso: true,
-    divid: "idVemDOVue",
-    linkVue: "www.google.com.br",
+    url: "https://www.google.com.br",
   },
   methods: {
-    clicou: () => {
-      console.log("v-on criou uma função padrão");
-    },
-    enviou: () => {
-      console.log("O v-on preveniu o evento padrão do formulario.");
+    fazAlgumaCoisa: () => {
+      console.log(
+        "Você pode diminuir o tamanho do v-on somente digitando um @"
+      );
     },
   },
 });
