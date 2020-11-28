@@ -12,14 +12,14 @@ destroyed - quando o elemento é destruido
 let app = new Vue({
   el: "#app",
   data: {
-    objeto: {
-      nome: "Igor",
-      idade: 99,
-      pai: "Fulano",
-      mae: "Fulano",
-    },
+    contagem: 0,
   },
   computed: {},
   watch: {},
-  methods: {},
+  methods: {
+    addContagem: function (x, e) {
+      console.log(e);
+      this.contagem += x;
+    },
+  },
 });

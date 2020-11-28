@@ -45,10 +45,13 @@
         </div>
     </aside>
 
-    <main class="main">
-        <div v-for="(value, key, index) in objeto" class="text-center">
-           {{index}} -  {{key}} : {{value}}
-        </div>
+    <main class="main container mx-auto my-12 p-12">
+        <button
+            class="transition duration-300 ease-in-out mr-1 mb-1 last:mr-0 py-2 px-4 bg-transparent border border-solid border-purple-700 rounded text-purple-700 font-normal focus:outline-none focus:shadow-outline hover:bg-purple-700 hover:text-white"
+            v-on:click="addContagem(10, $event)">
+            button
+        </button>
+        <p>A contagem é: {{contagem}}</p>
     </main>
     <footer class="footer">
         <p><span class="footer__copyright">&copy;</span>  MTH</p>
