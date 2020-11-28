@@ -229,12 +229,21 @@
     </aside>
 
     <main class="main">
-        Primeiro Nome:
-        <input v-model="primeiroNome"><br>
-        Segundo Nome:
-        <input v-model="segundoNome">
+        Digite um nome:
+        <input v-model="nomeInput">
         <br>
-        <input v-model="nomeCompleto">
+        <span v-text="aviso"></span>
+        <div v-if="nomePronto">
+            <button @click="add">
+                Adicionar
+            </button>
+        </div>
+        <br>
+        Nomes:
+        <ul>
+            <li v-for="item in lista"> {{ item }}</li>
+        </ul>
+        {{ totalTexto}}
      </main>
     <footer class="footer">
         <p><span class="footer__copyright">&copy;</span>  MTH</p>

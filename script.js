@@ -12,20 +12,41 @@ destroyed - quando o elemento é destruido
 let app = new Vue({
   el: "#app",
   data: {
-    primeiroNome: "",
-    segundoNome: "",
+    nomeInput: "",
+    aviso: "",
+    nomePronto: false,
+    lista: [],
+    times: null,
   },
-  methods: {},
+  watch: {
+    nomeInput: function () {
+      if (this.timer != null) {
+        clearTimeout(this.timer);
+      }
+      if (this.nomeInput != "") {
+        this.aviso = "Digitando..";
+        this.nomePronto = false;
+        this.timer = setTimeout(this.ficarPronto, 1000);
+      }
+    },
+  },
+  methods: {
+    ficarPronto: function () {
+      this.aviso = "";
+
+      if (this.nomeInput.length > 2) {
+        this.nomePronto = true;
+      }
+    },
+    add: function () {
+      this.lista.push(this.nomeInput);
+      this.nomeInput = "";
+      this.nomePronto = false;
+    },
+  },
   computed: {
-    nomeCompleto: {
-      get: function () {
-        return `${this.primeiroNome} ${this.segundoNome}`;
-      },
-      set: function (novoValor) {
-        let nomes = novoValor.split(" ");
-        this.primeiroNome = nomes[0];
-        this.segundoNome = nomes[1];
-      },
+    totalTexto: function () {
+      return `Quantidade de nomes na lista ${this.lista.length}`;
     },
   },
 });
