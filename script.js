@@ -1,24 +1,16 @@
-/*
-beforeCreate - Antes da execução (Geralmente usado para influenciar em outros elementos)
-created - Quando o elemento é criado
-beforeMount - Quando o elemento foi criado porém não é exibido na tela
-mounted = quando o elemento é renderizado na tela
-beforeUpdate - Antes de atualização
-updated: quando o elemento é atualizado ou modificado
-beforeDestroy - Antes do elemento destruid
-destroyed - quando o elemento é destruido
-*/
+Vue.component("menuTest", {
+  data: function () {
+    return {
+      texto: "Texto Qualquer",
+    };
+  },
+  template: `<button>{{texto}}</button>`,
+});
 
 let app = new Vue({
   el: "#app",
-  data: {
-    selecionado: "",
-  },
+  data: {},
   computed: {},
   watch: {},
-  methods: {
-    teclou: function () {
-      this.contagem++;
-    },
-  },
+  methods: {},
 });
