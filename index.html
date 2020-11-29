@@ -46,10 +46,8 @@
     </aside>
 
     <main class="main container mx-auto my-12 p-12">
-    <input v-model="busca">
-    <ul v-for="item in nomesFiltrados">
-         <li>{{item}}</li>
-    </ul>
+    <input type="text" @keyup="teclou($event)" />
+    <p>A contagem é: {{contagem}}</p>
     </main>
     <footer class="footer">
         <p><span class="footer__copyright">&copy;</span>  MTH</p>
