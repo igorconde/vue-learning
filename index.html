@@ -46,9 +46,12 @@
     </aside>
 
     <main class="main container mx-auto my-12 p-12">
-    <input type="radio" name="grupo" value="Sim" v-model="grupo" />Sim <br>
-    <input type="radio" name="grupo" value="Nao" v-model="grupo" />nao <br>
-    <p>Mensagem: {{grupo}}</p>
+        <select v-model="opcao">
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+        </select>
+    <p>Mensagem: {{opcao}}</p>
     </main>
     <footer class="footer">
         <p><span class="footer__copyright">&copy;</span>  MTH</p>
