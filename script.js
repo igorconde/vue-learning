@@ -17,9 +17,7 @@ let app = new Vue({
   computed: {},
   watch: {},
   methods: {
-    teclou: function (e) {
-      let keyCode = e.keyCode;
-
+    teclou: function () {
       this.contagem++;
     },
   },

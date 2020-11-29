@@ -46,7 +46,8 @@
     </aside>
 
     <main class="main container mx-auto my-12 p-12">
-    <input type="text" @keyup="teclou($event)" />
+    <input type="text" @keyup.shift.67="teclou" />
+    <button @click.shift="teclou">Clique Aqui</button>
     <p>A contagem é: {{contagem}}</p>
     </main>
     <footer class="footer">
