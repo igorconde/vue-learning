@@ -46,9 +46,19 @@
     </aside>
 
     <main class="main container mx-auto my-12 p-12" id="main" >
-        <postagem titulo="Titulo 01" corpo="texto 1"></postagem>
-        <postagem titulo="Titulo 02" corpo="texto 2"></postagem>
-        <postagem titulo="Titulo 03" corpo="texto 3"></postagem>
+        <aviso>
+            você foi avisado
+        </aviso>
+        <postagem>
+            <template slot="titulo">
+                Teste com Slot!<br>
+            </template>
+            <template slot="corpo">
+            <button>Botão</button>
+            </template>
+        </postagem>
+        <postagem titulo="Titulo 02"></postagem>
+        <postagem titulo="Titulo 03"></postagem>
     </main>
     <footer class="footer" id="footer">
         <p><span class="footer__copyright">&copy;</span>  {{footer}}</p>
