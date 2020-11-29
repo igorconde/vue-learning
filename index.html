@@ -47,9 +47,7 @@
 
     <main class="main container mx-auto my-12 p-12">
         <select v-model="opcao">
-            <option value="A">A</option>
-            <option value="B">B</option>
-            <option value="C">C</option>
+            <option v-for="item in opcoes">{{item}}</option>
         </select>
     <p>Mensagem: {{opcao}}</p>
     </main>

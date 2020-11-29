@@ -12,7 +12,8 @@ destroyed - quando o elemento é destruido
 let app = new Vue({
   el: "#app",
   data: {
-    opcao: "A",
+    opcao: "",
+    opcoes: [2, 3, 4],
   },
   computed: {},
   watch: {},
