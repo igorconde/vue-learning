@@ -46,9 +46,9 @@
     </aside>
 
     <main class="main container mx-auto my-12 p-12">
-    <input type="text" @keyup.shift.67="teclou" />
-    <button @click.shift="teclou">Clique Aqui</button>
-    <p>A contagem é: {{contagem}}</p>
+    <input type="checkbox" v-model="nomes" value="Fulano" />Fulano<br>
+    <input type="checkbox" v-model="nomes" value="Ciclano" />Ciclano <br>
+    <p>Mensagem: {{nomes}}</p>
     </main>
     <footer class="footer">
         <p><span class="footer__copyright">&copy;</span>  MTH</p>

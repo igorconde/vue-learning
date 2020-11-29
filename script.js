@@ -12,7 +12,7 @@ destroyed - quando o elemento é destruido
 let app = new Vue({
   el: "#app",
   data: {
-    contagem: 0,
+    nomes: [],
   },
   computed: {},
   watch: {},
