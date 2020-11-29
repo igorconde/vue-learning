@@ -46,9 +46,9 @@
     </aside>
 
     <main class="main container mx-auto my-12 p-12">
-    <input type="checkbox" v-model="nomes" value="Fulano" />Fulano<br>
-    <input type="checkbox" v-model="nomes" value="Ciclano" />Ciclano <br>
-    <p>Mensagem: {{nomes}}</p>
+    <input type="radio" name="grupo" value="Sim" v-model="grupo" />Sim <br>
+    <input type="radio" name="grupo" value="Nao" v-model="grupo" />nao <br>
+    <p>Mensagem: {{grupo}}</p>
     </main>
     <footer class="footer">
         <p><span class="footer__copyright">&copy;</span>  MTH</p>

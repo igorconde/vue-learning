@@ -12,7 +12,7 @@ destroyed - quando o elemento é destruido
 let app = new Vue({
   el: "#app",
   data: {
-    nomes: [],
+    grupo: "SIM",
   },
   computed: {},
   watch: {},
