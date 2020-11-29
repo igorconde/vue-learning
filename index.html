@@ -46,10 +46,8 @@
     </aside>
 
     <main class="main container mx-auto my-12 p-12">
-        <select v-model="opcao">
-            <option v-for="item in opcoes">{{item}}</option>
-        </select>
-    <p>Mensagem: {{opcao}}</p>
+        <input type="checkbox" v-model="checkBoxValue" true-value="sim" false-value="nao">
+    <p>Mensagem: {{checkBoxValue}}</p>
     </main>
     <footer class="footer">
         <p><span class="footer__copyright">&copy;</span>  MTH</p>
